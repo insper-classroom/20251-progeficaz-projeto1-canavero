@@ -1,0 +1,86 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-height: 150px;
+    max-width: 200px;
+    width: 120px;
+    height: 120px;
+}
+
+/* Estilo do cabeçalho */
+h1 {
+    color: #333;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="submit"],
+form input[type="textarea"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="textarea"] {
+    height: 100px; /* Ajuste a altura conforme necessário */
+    
+}
+
+form input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Estilo da lista de notas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 300px;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo personalizado adicional */
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
