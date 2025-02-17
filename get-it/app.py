@@ -15,11 +15,11 @@ def index():
 @app.route("/add_user",methods=['POST','GET'])
 def add_user():
     if request.method=='POST':
-        uname=request.form['uname']
-        contact=request.form['contact']
+        nome=request.form['nome']
+        detalhes=request.form['detalhes']
         con=sql.connect("db_web.db")
         cur=con.cursor()
-        cur.execute("insert into users(UNAME,CONTACT) values (?,?)",(uname,contact))
+        cur.execute("insert into users(NOME,DETALHES) values (?,?)",(nome,detalhes))
         con.commit()
         flash('User Added','success')
         return redirect(url_for("index"))
@@ -28,11 +28,11 @@ def add_user():
 @app.route("/edit_user/<string:uid>",methods=['POST','GET'])
 def edit_user(uid):
     if request.method=='POST':
-        uname=request.form['uname']
-        contact=request.form['contact']
+        nome=request.form['nome']
+        detalhes=request.form['detalhes']
         con=sql.connect("db_web.db")
         cur=con.cursor()
-        cur.execute("update users set UNAME=?,CONTACT=? where UID=?",(uname,contact,uid))
+        cur.execute("update users set NOME=?,DETALHES=? where UID=?",(nome,detalhes,uid))
         con.commit()
         flash('User Updated','success')
         return redirect(url_for("index"))
