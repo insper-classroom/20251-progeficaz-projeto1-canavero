@@ -3,14 +3,15 @@
   <div class='row'>
     <div class='col-5 mx-auto'>
       <h3>Edit user</h3><hr>
-      <form method='post' action='{{url_for("edit_user",uid=datas.UID)}}'>
+      <form method='post' action='{{url_for("update_user")}}'>
+        <input type='hidden' name='id' value='{{datas.UID}}'>
         <div class='form-group'>
-          <label>User Name</label>
-          <input type='text' name='nome' required class='form-control' value='{{datas.UNAME}}'>
+          <label>Nome</label>
+          <input type='text' name='nome' required class='form-control' value='{{datas.NOME}}'>
         </div>
         <div class='form-group'>
-          <label>Contact</label>
-          <input type='text' name='detalhes' required class='form-control' value='{{datas.CONTACT}}'>
+          <label>Detalhes</label>
+          <input type='text' name='detalhes' required class='form-control' value='{{datas.DETALHES}}'>
         </div>
         <input type='submit' value='Submit' class='btn btn-primary'>
       </form>
